@@ -1,6 +1,7 @@
 /**
  * Our specialty ElectricPokemon that inherits from our Pokemon class.
  */
+import java.math.MathContext;
 public class ElectricPokemon extends Pokemon {
     /**
      * The value we will be setting our specialty probability to.
@@ -61,5 +62,20 @@ public class ElectricPokemon extends Pokemon {
     public boolean attack(final Pokemon opponent) {
         return false;
     }
-
+    //making new pokemon object
+    super.attack(opponent);
+    return false;
+    /*
+    pokemon me = new pokemon;
+    boolean count = true;
+    */
+    if (opponent.type != electric) {
+        return false;
+    }
+    if (super.attack != fatal) {
+        return false;
+    }
+    if (opponent.getHitPoints() > 0 && double finalProb > specProb) {
+        return false;
+    }
 }
